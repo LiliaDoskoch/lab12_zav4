@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрація циклів в JavaScript</title>
+</head>
+<body>
+    <h1>Демонстрація циклів в JavaScript</h1>
+
+    <h2>Добуток чисел (Цикл for):</h2>
+    <p id="for-product"></p>
+
+    <h2>Добуток чисел (Цикл while):</h2>
+    <p id="while-product"></p>
+
+    <h2>Добуток чисел (Цикл do...while):</h2>
+    <p id="do-while-product"></p>
+
+    <script>
+        let forProduct = 1;
+        for (let i = 1; i <= 5; i++) {
+            forProduct *= i; 
+        }
+        document.getElementById('for-product').textContent = `Добуток чисел від 1 до 5 (for): ${forProduct}`;
+
+        let whileProduct = 1;
+        let j = 1;
+        while (j <= 5) {
+            whileProduct *= j; 
+            j++;
+        }
+        document.getElementById('while-product').textContent = `Добуток чисел від 1 до 5 (while): ${whileProduct}`;
+
+        let doWhileProduct = 1;
+        let k = 1;
+        do {
+            doWhileProduct *= k; 
+            k++;
+        } while (k <= 5);
+        document.getElementById('do-while-product').textContent = `Добуток чисел від 1 до 5 (do...while): ${doWhileProduct}`;
+    </script>
+</body>
+</html>
